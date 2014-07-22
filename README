@@ -1,7 +1,8 @@
-Contributing to Libmarpa
-=========================
+Contributing to the Kollos project
+==================================
 
-This is the repository for Libmarpa, the Marpa parse engine C library.
+This is the repository for the Kollos project, an extension of, and
+wrapper for, the Marpa parse engine.
 
 By submitting code to this repository, you are considered to have
 signed off on the Developer's Certificate of Origin, which is given
