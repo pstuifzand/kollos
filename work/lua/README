@@ -1,0 +1,7 @@
+Layout:
+
+The 'base' directory began with Lua 5.2.3.  It contains the Lua sources
+prior to renaming into the 'marpa_lua' form.  Renaming occurs after most
+other work, in order to make it convenient to use patches to Lua 5.2.3.
+
+The 'src' directory contains the sources after renaming.
