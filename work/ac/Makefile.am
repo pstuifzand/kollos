@@ -15,6 +15,7 @@
 
 ## Makefile.am -- Process this file with automake to produce Makefile.in
 
+SUBDIRS = lua lua_test
 AM_CFLAGS = $(WARNING_CFLAGS) $(MARPA_DEBUG_FLAG)
 AM_CPPFLAGS = $(WARNING_CPPFLAGS)
 RELEASE= $(MARPA_LIB_MAJOR_VERSION).$(MARPA_LIB_MINOR_VERSION).$(MARPA_LIB_MICRO_VERSION)
