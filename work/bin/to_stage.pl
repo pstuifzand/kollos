@@ -102,7 +102,7 @@ doc/lgpl-3.0.texi: ac_doc/lgpl-3.0.texi
 doc/api.texi: dev/api.texi
 doc/internal.texi: dev/internal.texi
 stage/README.INSTALL: notes/README.INSTALL
-stage/lua/luaconf.h.template.in: lua/base/src/luaconf.h.template.in
+stage/lua/luaconf.h.template.in: lua/gen/luaconf.h.template.in
 stage/lua/ldo.c: lua/gen/ldo.c
 stage/lua/ldebug.h: lua/gen/ldebug.h
 stage/lua/lzio.h: lua/gen/lzio.h
