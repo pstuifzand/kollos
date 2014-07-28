@@ -31,10 +31,10 @@ DIR:
 for my $dir (
     File::Spec->catdir(qw(stage)),
     File::Spec->catdir(qw(stage lua)),
-    File::Spec->catdir(qw(stage lua tests)),
-    File::Spec->catdir(qw(stage lua tests ltests)),
-    File::Spec->catdir(qw(stage lua tests libs)),
-    File::Spec->catdir(qw(stage lua tests libs P1))
+    File::Spec->catdir(qw(stage lua test)),
+    File::Spec->catdir(qw(stage lua test ltests)),
+    File::Spec->catdir(qw(stage lua test libs)),
+    File::Spec->catdir(qw(stage lua test libs P1))
     )
 {
     next DIR if -d $dir;
@@ -161,37 +161,38 @@ stage/lua/lcode.h: lua/gen/lcode.h
 stage/lua/lvm.h: lua/gen/lvm.h
 stage/lua/lzio.c: lua/gen/lzio.c
 stage/lua/lundump.c: lua/gen/lundump.c
-stage/lua_tests/strings.lua: lua/tests/strings.lua
-stage/lua_tests/literals.lua: lua/tests/literals.lua
-stage/lua_tests/constructs.lua: lua/tests/constructs.lua
-stage/lua_tests/big.lua: lua/tests/big.lua
-stage/lua_tests/errors.lua: lua/tests/errors.lua
-stage/lua_tests/goto.lua: lua/tests/goto.lua
-stage/lua_tests/nextvar.lua: lua/tests/nextvar.lua
-stage/lua_tests/ltests/ltests.c: lua/tests/ltests/ltests.c
-stage/lua_tests/ltests/ltests.h: lua/tests/ltests/ltests.h
-stage/lua_tests/verybig.lua: lua/tests/verybig.lua
-stage/lua_tests/bitwise.lua: lua/tests/bitwise.lua
-stage/lua_tests/libs/lib2.c: lua/tests/libs/lib2.c
-stage/lua_tests/libs/lib1.c: lua/tests/libs/lib1.c
-stage/lua_tests/libs/lib11.c: lua/tests/libs/lib11.c
-stage/lua_tests/libs/makefile: lua/tests/libs/makefile
-stage/lua_tests/libs/lib21.c: lua/tests/libs/lib21.c
-stage/lua_tests/events.lua: lua/tests/events.lua
-stage/lua_tests/math.lua: lua/tests/math.lua
-stage/lua_tests/calls.lua: lua/tests/calls.lua
-stage/lua_tests/locals.lua: lua/tests/locals.lua
-stage/lua_tests/all.lua: lua/tests/all.lua
-stage/lua_tests/files.lua: lua/tests/files.lua
-stage/lua_tests/attrib.lua: lua/tests/attrib.lua
-stage/lua_tests/sort.lua: lua/tests/sort.lua
-stage/lua_tests/db.lua: lua/tests/db.lua
-stage/lua_tests/code.lua: lua/tests/code.lua
-stage/lua_tests/gc.lua: lua/tests/gc.lua
-stage/lua_tests/api.lua: lua/tests/api.lua
-stage/lua_tests/closure.lua: lua/tests/closure.lua
-stage/lua_tests/main.lua: lua/tests/main.lua
-stage/lua_tests/pm.lua: lua/tests/pm.lua
-stage/lua_tests/checktable.lua: lua/tests/checktable.lua
-stage/lua_tests/coroutine.lua: lua/tests/coroutine.lua
-stage/lua_tests/vararg.lua: lua/tests/vararg.lua
+stage/lua_test/run-test.sh: lua/test/run-test.sh
+stage/lua_test/strings.lua: lua/test/strings.lua
+stage/lua_test/literals.lua: lua/test/literals.lua
+stage/lua_test/constructs.lua: lua/test/constructs.lua
+stage/lua_test/big.lua: lua/test/big.lua
+stage/lua_test/errors.lua: lua/test/errors.lua
+stage/lua_test/goto.lua: lua/test/goto.lua
+stage/lua_test/nextvar.lua: lua/test/nextvar.lua
+stage/lua_test/ltests/ltests.c: lua/test/ltests/ltests.c
+stage/lua_test/ltests/ltests.h: lua/test/ltests/ltests.h
+stage/lua_test/verybig.lua: lua/test/verybig.lua
+stage/lua_test/bitwise.lua: lua/test/bitwise.lua
+stage/lua_test/libs/lib2.c: lua/test/libs/lib2.c
+stage/lua_test/libs/lib1.c: lua/test/libs/lib1.c
+stage/lua_test/libs/lib11.c: lua/test/libs/lib11.c
+stage/lua_test/libs/makefile: lua/test/libs/makefile
+stage/lua_test/libs/lib21.c: lua/test/libs/lib21.c
+stage/lua_test/events.lua: lua/test/events.lua
+stage/lua_test/math.lua: lua/test/math.lua
+stage/lua_test/calls.lua: lua/test/calls.lua
+stage/lua_test/locals.lua: lua/test/locals.lua
+stage/lua_test/all.lua: lua/test/all.lua
+stage/lua_test/files.lua: lua/test/files.lua
+stage/lua_test/attrib.lua: lua/test/attrib.lua
+stage/lua_test/sort.lua: lua/test/sort.lua
+stage/lua_test/db.lua: lua/test/db.lua
+stage/lua_test/code.lua: lua/test/code.lua
+stage/lua_test/gc.lua: lua/test/gc.lua
+stage/lua_test/api.lua: lua/test/api.lua
+stage/lua_test/closure.lua: lua/test/closure.lua
+stage/lua_test/main.lua: lua/test/main.lua
+stage/lua_test/pm.lua: lua/test/pm.lua
+stage/lua_test/checktable.lua: lua/test/checktable.lua
+stage/lua_test/coroutine.lua: lua/test/coroutine.lua
+stage/lua_test/vararg.lua: lua/test/vararg.lua

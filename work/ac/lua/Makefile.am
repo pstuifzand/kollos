@@ -19,12 +19,12 @@ liblua_la_SOURCES = \
 bin_PROGRAMS = lua luac
 
 lua_SOURCES = lua.c
-lua_LDADD = liblua.la @LUA_LIBS@ @READLINE_LIBS@
+lua_LDADD = liblua.la @MARPA_LUA_LIBS@ @READLINE_LIBS@
 lua_DEPENDENCIES = liblua.la
 
 
 luac_SOURCES = luac.c
-luac_LDADD = liblua.la @LUA_LIBS@
+luac_LDADD = liblua.la @MARPA_LUA_LIBS@
 luac_DEPENDENCIES = liblua.la
 
 # luac must be linked statically because it uses functions that

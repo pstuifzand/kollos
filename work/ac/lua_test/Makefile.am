@@ -38,4 +38,4 @@ ACTIVE_TESTS = \
 TESTS = $(ACTIVE_TESTS)
 TESTS_ENVIRONMENT = $(srcdir)/run-test.sh $(top_builddir)/src/lua
 
-EXTRA_DIST = $(TESTS) README run-test.sh
+EXTRA_DIST = $(TESTS) run-test.sh

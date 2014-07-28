@@ -59,17 +59,17 @@ AC_ARG_WITH(
   [use_readline=yes]
 )
 
-LUA_LIBS="-lm"
+MARPA_LUA_LIBS="-lm"
 
 # Check for readline
-READLINE_DEFS="#undef LUA_USE_READLINE"
+READLINE_DEFS="#undef MARPA_LUA_USE_READLINE"
 if test "x$use_readline" == "xyes"; then
   AC_CHECK_LIB([readline], [readline], [use_readline=yes], [use_readline=no], [])
   AC_CHECK_HEADERS([readline/readline.h readline/history.h], [], [use_readline=no])
   if test "x$use_readline" == "xno"; then
     AC_MSG_WARN([readline headers could not be found, disabling readline support])
   else
-    READLINE_DEFS="#define LUA_USE_READLINE"
+    READLINE_DEFS="#define MARPA_LUA_USE_READLINE"
     READLINE_LIBS="$READLINE_LIBS -lreadline"
   fi
 fi
@@ -82,25 +82,25 @@ case "$host" in
   *)         use_os=posix  ;;
 esac
 
-POSIX_DEFS="#undef LUA_USE_POSIX"
-LUA_DL_DEFS="#undef LUA_USE_DLOPEN"
-LUA_BUILD_AS_DLL_DEFS="#undef LUA_BUILD_AS_DLL"
+POSIX_DEFS="#undef MARPA_LUA_USE_POSIX"
+MARPA_LUA_DL_DEFS="#undef MARPA_LUA_USE_DLOPEN"
+MARPA_LUA_BUILD_AS_DLL_DEFS="#undef MARPA_LUA_BUILD_AS_DLL"
 
 if test "x$use_os" == "xwin32"; then
-  LUA_BUILD_AS_DLL_DEFS="#define LUA_BUILD_AS_DLL"
+  MARPA_LUA_BUILD_AS_DLL_DEFS="#define MARPA_LUA_BUILD_AS_DLL"
 elif test "x$use_os" == "xmacosx"; then
-  POSIX_DEFS="#define LUA_USE_POSIX"
-  LUA_DL_DEFS="#define LUA_DL_DYLD"
+  POSIX_DEFS="#define MARPA_LUA_USE_POSIX"
+  MARPA_LUA_DL_DEFS="#define MARPA_LUA_DL_DYLD"
 elif test "x$use_os" == "xposix"; then
-  POSIX_DEFS="#define LUA_USE_POSIX"
-  LUA_DL_DEFS="#define LUA_DL_DLOPEN"
-  LUA_LIBS="$LUA_LIBS -ldl"
+  POSIX_DEFS="#define MARPA_LUA_USE_POSIX"
+  MARPA_LUA_DL_DEFS="#define MARPA_LUA_DL_DLOPEN"
+  MARPA_LUA_LIBS="$MARPA_LUA_LIBS -ldl"
 fi
 AC_SUBST(POSIX_DEFS)
-AC_SUBST(LUA_DL_DEFS)
-AC_SUBST(LUA_BUILD_AS_DLL_DEFS)
+AC_SUBST(MARPA_LUA_DL_DEFS)
+AC_SUBST(MARPA_LUA_BUILD_AS_DLL_DEFS)
 
-AC_SUBST(LUA_LIBS)
+AC_SUBST(MARPA_LUA_LIBS)
 
 # Checks for libraries.
 
